@@ -24,7 +24,8 @@ libice6
 ~~~
 
 
-
-
-
-#
+## 3. requirements.txt
+Use opencv-python-headless as it is out of libSM6 dependency.
+~~~
+opencv-python-headless==4.2.0.32
+~~~
