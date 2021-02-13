@@ -1,5 +1,4 @@
-# Face Recognition with Python
-# in Under 25 Lines of Code
+# Image Segmentation
 
 import cv2
 import matplotlib.pyplot as plt
