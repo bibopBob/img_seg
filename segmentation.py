@@ -9,9 +9,9 @@ import streamlit as st
 
 
 
-st.title(Image Segmantation)
+st.title('Image Segmantation')
 st.write("""
-Image segmentation by color ranges with OpenCV. 
+Image segmentation by color ranges with OpenCV.
 """)
 
 
