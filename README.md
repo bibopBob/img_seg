@@ -29,3 +29,7 @@ Use opencv-python-headless as it is out of libSM6 dependency.
 ~~~
 opencv-python-headless==4.2.0.32
 ~~~
+
+
+# OpenCV
+OpenCV (Open Source Computer Vision) is an open-source library that includes several hundreds of computer vision algorithms. Originally developed by Intel, is cross-platform and free for use under the open-source Apache 2 License.
