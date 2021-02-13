@@ -5,6 +5,8 @@ from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 from matplotlib import colors
 from matplotlib.colors import hsv_to_rgb
+import streamlit as st
+
 
 
 
@@ -59,26 +61,37 @@ def segment_fish(image):
 
 
 # With that useful function, you can segment all the fish from a list
-# results = [segment_fish(friend) for friend in nemos_friends]
+results = [segment_fish(friend) for friend in nemos_friends]
 
 # Let’s view all the results by plotting them in a loop:
-# for i in range(1,6):
-    # plt.subplot(1,2,1)
-    # plt.imshow(nemos_friends[i])
-    # plt.subplot(1,2,2)
-    # plt.imshow(results[i])
+for i in range(1,6):
+    # streamlit line
+    fig,ax = plt.subplots()
+    plt.subplot(1,2,1)
+    plt.imshow(nemos_friends[i])
+    plt.subplot(1,2,2)
+    plt.imshow(results[i])
     # plt.show()
+    # streamlit line    
+    st.pyplot(fig)
 
 
 
 
+
+
+########################################################################
+########################################################################
+##################### Improve to image input ###########################
+#### Unfinished: ColorPicker and Inputs to min and max color range #####
+########################################################################
 
 
 # streamlit adaptation
-import streamlit as st
-from bokeh.models import ColorPicker
-from bokeh.models.callbacks import CustomJS
-from PIL import ImageColor
+# import streamlit as st
+# from bokeh.models import ColorPicker
+# from bokeh.models.callbacks import CustomJS
+# from PIL import ImageColor
 
 
 
@@ -98,17 +111,17 @@ from PIL import ImageColor
 
 
 
-def showplot(file_up):
-    fig,ax = plt.subplots()
-    plt.subplot(1,2,1)
-    plt.imshow(file_up)
-    st.pyplot(fig)
+# def showplot(file_up):
+#     fig,ax = plt.subplots()
+#     plt.subplot(1,2,1)
+#     plt.imshow(file_up)
+#     st.pyplot(fig)
 
 
-uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg','jpg'])
-if uploaded_file is not None:
-    results = segment_fish(friend)
-    showplot(results)
+# uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg','jpg'])
+# if uploaded_file is not None:
+#     results = segment_fish(friend)
+#     showplot(results)
 
 
 
