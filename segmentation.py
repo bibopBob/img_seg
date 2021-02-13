@@ -9,6 +9,11 @@ import streamlit as st
 
 
 
+st.title(Image Segmantation)
+st.write("""
+Image segmentation by color ranges with OpenCV. 
+""")
+
 
 # Combine all the preview code used to segment a single fish into a function
 # that will take an image as input and return the segmented image.
@@ -72,7 +77,7 @@ for i in range(1,6):
     plt.subplot(1,2,2)
     plt.imshow(results[i])
     # plt.show()
-    # streamlit line    
+    # streamlit line
     st.pyplot(fig)
 
 
