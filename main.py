@@ -1,4 +1,4 @@
-# Image Segmentation
+# Image Segmentation based in color range
 
 import cv2
 import matplotlib.pyplot as plt
